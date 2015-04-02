@@ -1,6 +1,6 @@
 <li><a href="/"><i class="fa fa-home"></i></a></li>
 {% for item in site.data.menu %}
 <li{% if page.url == item.url %} class="active"{% endif %}>
-  <a href="{{ item.url }}">{% if item.icon %}<i class="fa {{ item.icon }}"></i> {% endif %}{{ item.title }}</a>
+  <a href="{{ item.url }}" {% if item.target %}target="{{item.target}}"{% endif %}>{% if item.icon %}<i class="fa {{ item.icon }}"></i> {% endif %}{{ item.title }}</a>
 </li>
 {% endfor %}
