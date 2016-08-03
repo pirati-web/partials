@@ -6,7 +6,7 @@
     <i class="fa fa-clock-o"></i> <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%d.%m.%Y"}}</time>
   </h6>
   {% if post.splash %}<img src="{{ post.splash }}" alt="splash image" class="splash" />{% endif %}
-  {{ post.excerpt }}
+  {{ post.excerpt | markdownify }}
   <a href="{{ post.url }}" class="right">Celý článek →</a>
   <span class="category"><i class="fa fa-tags"></i> {{ post.tags | category_links }}</span>
 </article>
