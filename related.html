@@ -1,17 +1,18 @@
+<h3>Podobné</h3>
 {% for item in site.related_posts limit:4 %}
-<article class="col3">
+<article>
   <a class='item' href='{{item.url}}'>{{item.title}}</a>
 
   <h6>
-    <span><i class="fa fa-tags"></i> {{ item.tags | category_links }}</span> |
-    <time datetime="{{post.date|date:"%F"}}">{{page.date|date:"%d.%m.%Y"}}</time>
+    <span><i class="fi-pricetag-multiple"></i> {{ item.tags | category_links }}</span> |
+    <time datetime="{{post.date|date:"%F"}}"><i class="fi-clock"></i> {{page.date|date:"%d.%m.%Y"}}</time>
   </h6>
 
   <p>{{ item.excerpt | markdownify }}</p>
 </article>
 {% endfor %}
 
-<h2>Archiv <i class="fa fa-archive"></i></h2>
+<h2>Archiv <i class="fi-page-multiple"></i></h2>
 <ul>
   {% for post in site.posts %}
 
