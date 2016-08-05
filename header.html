@@ -1,0 +1,19 @@
+<header id="header" class="contain-to-grid">
+  <div class="top-bar">
+    <div class="top-bar-title">
+      <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <button class="menu-icon dark" type="button" data-toggle></button>
+      </span>
+      {% if site.logo %}<img src="{{ site.logo }}" alt="logo" id="logo" />{% endif %}
+      <span>{{ site.title }}</span>
+    </div>
+    <div id="responsive-menu">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          {% include menu.main.html %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</header>
