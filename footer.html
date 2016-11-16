@@ -1,27 +1,26 @@
 
 <footer class="site-footer row" role="contentinfo">
-<hr/>
-  <div class="large-12 columns">
 
-    <ul class="inline-list right">
-      <li><a href="{{ site.facebookurl }}"><i class="fi-social-facebook"></i> Facebook</a></li>
-      {% if site.twitterurl %}<li><a href="{{ site.twitterurl }}">Twitter <i class="fi-social-twitter"></i></a></li>{% endif %}
+  <div class="small-12 medium-6 columns">
+    <ul class="menu right">
+      <li><a href="{{ site.facebookurl }}"><h3><i class="fi-social-facebook"></i></h3></a></li>
+      {% if site.twitterurl %}
+      <li><a href="{{ site.twitterurl }}"><h3><i class="fi-social-twitter"></i></h3></a></li>
+      {% endif %}
+      <li><a class='rss' href='/blog.rss'><h3><i class="fi-rss"></i></h3></a></li>
+      <li><a href="#"><i class="fi-arrow-up"></i> Nahoru (Top)</a></li>
     </ul>
+  </div>
 
-    <ul class="inline-list">
-      <li><a class='rss' href='/blog.rss'><i class="fi-rss"></i> RSS</a></li>
-    </ul>
-
+  <div class="small-12 medium-6 columns">
     <p class="quiet copyright">
-      Všechna práva vyhlazena. Obsah této stránky můžete volně šířit podle licence
+      Všechna práva vyhlazena.
+      <br />
+      Obsah můžete volně šířit podle licence
       <a href="http://creativecommons.org/licenses/by/4.0/">
         <img src="https://licensebuttons.net/l/by/4.0/80x15.png" alt="Creative commons Uveďte autora 4.0"/>
       </a>
     </p>
-
-    <div class="right">
-      <a href="#"><i class="fi-arrow-up"></i> Nahoru (Top)</a>
-    </div>
-
   </div>
+
 </footer>
