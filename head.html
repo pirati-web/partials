@@ -29,14 +29,13 @@
 <meta property="og:type"          content="website" />
 <meta property="og:title"         content="Piráti: {{page.title}}" />
 <meta property="og:description"   content="{{page.excerpt | strip_html }}" />
-{% endif %}{% if page.layout == 'post' %}
-<meta property="og:image"         content="{{page.image | prepend: '/assets/img/articles/' | absolute_url }}" />
-{% endif %}{% if page.layout == 'page' %}
-<meta property="og:image"         content="{{page.image | prepend: '/assets/img/' | absolute_url }}" />
+{% endif %}{% if page.image %}
+<meta property="og:image"         content="{{page.image | absolute_url }}" />
 {% endif %}
 <!-- Fonts -->
 {% if page.layout != 'blank' %}
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin-ext" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300i,400,500,700&subset=latin-ext" rel="stylesheet">
-<link href="{{'assets/css/main.css' | relative_url }}" rel="stylesheet">
+<link href="https://praha.pirati.cz/assets/css/main.css" rel="stylesheet">
 {% endif %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">

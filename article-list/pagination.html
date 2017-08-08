@@ -13,9 +13,9 @@
       {{ forloop.index }}
     {% else %}
       {% if forloop.index == 1 %}
-      <a href="/aktuality/" aria-label="Page {{ forloop.index }}">
+      <a href="/{{site.articlepath}}/" aria-label="Page {{ forloop.index }}">
     {% else %}
-      <a href="/aktuality/{{forloop.index}}/" aria-label="Page {{ forloop.index }}">
+      <a href="/{{site.articlepath}}/{{forloop.index}}/" aria-label="Page {{ forloop.index }}">
     {% endif %}
       {{ forloop.index }}</a>
     {% endif %}

@@ -9,10 +9,18 @@
       </a>
       <div class="c-widget-accordion-content" data-tab-content="">
         <div class="c-widget-accordion-content-inner">
-          <div id="people"></div>
+          <div id="people">
+            {% for item in site.data.links.sidebar.lide.items %}
+            <div>
+              <img src="{{item.photo}}" alt="{{item.name}} fotka" class="thumbnail" />
+              <h5><a href="{{item.link}}">{{item.name}}</a></h5>
+              <p>{{item.desc}}</p>
+            </div>
+            {% endfor %}
+          </div>
         </div>
         <div class="c-widget-accordion-content__cta">
-          <a class="expanded button large" href="{{ '/lide/' | relative_url }}"> Poznejte celý náš tým! </a>
+          <a class="expanded button large" href="{{site.data.links.sidebar.lide.link}}">Poznejte celý náš tým!</a>
         </div>
       </div>
     </li>
