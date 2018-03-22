@@ -1,0 +1,8 @@
+
+<h4>
+  <i class="fas fa-calendar-alt"></i>
+  <time datetime="{{include.item.date|date:"%F"}}">
+    {{include.item.date|date:"%d.%m.%Y %H:%M"}}
+  </time> | <b>{{ include.item.title }}</b>
+</h4>
+<p>{{ include.item.description }}</p>
