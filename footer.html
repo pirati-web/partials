@@ -1,26 +1,33 @@
 
-<footer class="site-footer row" role="contentinfo">
-
-  <div class="small-12 medium-6 columns">
-    <ul class="menu right">
-      <li><a href="{{ site.facebookurl }}"><h3><i class="fi-social-facebook"></i></h3></a></li>
-      {% if site.twitterurl %}
-      <li><a href="{{ site.twitterurl }}"><h3><i class="fi-social-twitter"></i></h3></a></li>
-      {% endif %}
-      <li><a class='rss' href='/blog.rss'><h3><i class="fi-rss"></i></h3></a></li>
-      <li><a href="#"><i class="fi-arrow-up"></i> Nahoru (Top)</a></li>
-    </ul>
+<div class="row">
+  <div class="col-12 text-right">
+    <div id="downmenu" class="d-flex flex-row">
+      {% include shared/menu.main.html %}
+    </div>
   </div>
+</div>
 
-  <div class="small-12 medium-6 columns">
+<div class="row">
+  <div class="col-sm-12 col-lg-6">
+    <div id="downlinks" class="d-flex flex-row">
+      <a href="{{ site.facebookurl }}">
+        <h3><i class="fab fa-facebook"></i>
+        </h3>
+      </a>
+      {% if site.twitterurl %}
+      <a href="{{ site.twitterurl }}"><h3><i class="fab fa-twitter-square"></i></h3></a>
+      {% endif %}
+      <a class='rss' href='/blog.rss'><h3><i class="fas fa-rss-square"></i></h3></a>
+      <a href="#"><i class="fas fa-angle-double-up"></i> Nahoru (Top)</a>
+    </div>
+  </div>
+  <div class="col-sm-12 col-lg-6 text-right">
     <p class="quiet copyright">
-      Všechna práva vyhlazena.
-      <br />
-      Obsah můžete volně šířit podle licence
+      Všechna práva vyhlazena. Obsah můžete volně šířit podle licence
       <a href="http://creativecommons.org/licenses/by/4.0/">
-        <img src="https://licensebuttons.net/l/by/4.0/80x15.png" alt="Creative commons Uveďte autora 4.0"/>
+        <img src="https://licensebuttons.net/l/by/4.0/80x15.png"
+          alt="Creative commons Uveďte autora 4.0"/>
       </a>
     </p>
   </div>
-
-</footer>
+</div>
