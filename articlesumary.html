@@ -2,12 +2,16 @@
 <article>
   <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
   {% if post.image %}
-  <img src="{{ post.image }}" alt="splash image" class="splash" />
+  <div class="splashdiv">
+    <img src="{{ post.image }}" alt="splash image" class="splash" />
+  </div>
   {% endif %}
-  <div class="mb-2 mt-3">
+  <div class="mb-3 mt-3">
     {% include shared/articlemeta.html post=post showauthor=1 %}
   </div>
-  {{ post.excerpt | markdownify }}
+  <div class="perex">
+    {{ post.excerpt | markdownify }}
+  </div>
   <a href="{{ post.url }}" class="right">Přečíst celý článek →</a>
   <hr />
 </article>
