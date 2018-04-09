@@ -3,8 +3,8 @@
   <i class="fas fa-calendar-alt"></i>
   <time datetime="{{include.item.date|date:"%F"}}">
     {{include.item.date|date:"%d.%m.%Y %H:%M"}}
-  </time> {% if include.item.link %}<a href="{{ include.item.link }}">{% endif %}
+  </time> {% if include.item.url %}<a href="{{ include.item.url }}">{% endif %}
     {{ include.item.title }}
-  {% if include.item.link %}</a>{% endif %}
+  {% if include.item.url %}</a>{% endif %}
 </h4>
-<p>{{ include.item.description }}</p>
+<p>{{ include.item.excerpt }}</p>
