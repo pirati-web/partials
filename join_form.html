@@ -1,29 +1,69 @@
-<form>
+<form name='joinform' method="POST" action="{{site.data.links.joinactionurl}}">
   <div class="form-group">
-    <label for="exampleInputEmail1">jméno a příjmení</label>
-    <input type="email" class="form-control" id="name" aria-describedby="emailHelp"
+    <label for="joinform_name">jméno a příjmení</label>
+    <input type="text" class="form-control" id="joinform_name" name='name'
       placeholder="zadej své jméno a příjmení">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
   </div>
 
   <div class='row'>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="exampleInputEmail1">email</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+        <label for="joinform_email">email</label>
+        <input type="email" class="form-control" id="joinform_email" name='email'
           placeholder="zadej email">
-        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
       </div>
     </div>
 
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="exampleInputEmail1">telefon</label>
-        <input type="email" class="form-control" id="phone" aria-describedby="emailHelp"
-          placeholder="zadej svuj telefon">
+        <label for="joinform_phone">telefon</label>
+        <input type="number" class="form-control" id="joinform_phone" name='phone'
+          placeholder="zadej svůj telefon">
       </div>
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">odeslat</button>
+  <input type="hidden" name="_subject" value="novy pirat" />
+  <input type="text" name="_gotcha" style="display:none" />
+  <input type="hidden" name="_language" value="cs" />
+
+  <button type="submit" class="btn btn-primary" id="joinformsubmit">
+    odeslat
+  </button>
 </form>
+
+<script type="text/javascript">
+  // $('#submspin').hide() <i class='fas fa-spinner fa-spin' id='submspin'></i>
+  // function submitForm (data) {
+  //   $('#submspin').show()
+  //   $.ajax({
+  //     url: '{{site.data.links.joinactionurl}}',
+  //     data: JSON.stringify(data),
+  //     type: 'POST',
+  //     contentType: 'application/json; charset=utf-8',
+  //     dataType: 'json',
+  //     success: function (result) {
+  //       $('#submspin').hide()
+  //       alert('data odeslána, díky!')
+  //     },
+  //     error: function (err) {
+  //       $('#submspin').hide()
+  //       alert(JSON.stringify(err))
+  //     }
+  //   })
+  // }
+  // function onSubmit() {
+  //   var email = $('#joinform_email').val()
+  //   var phone = $('#joinform_phone').val()
+  //   if (!email && !phone) {
+  //     alert('prosím zadejte buď email nebo telefon')
+  //   } else {
+  //     submitForm({
+  //       email: email,
+  //       phone: phone,
+  //       name: $('#joinform_name').val()
+  //     })
+  //   }
+  // }
+  // $("#joinformsubmit").click(onSubmit);
+</script>
