@@ -1,10 +1,11 @@
+{% unless item.draft %}
 <item>
   <title>{{item.title | xml_escape}}</title>
   <link>
     {% if item.url contains '://' %}
       {{item.url}}
     {% else %}
-      {{item.url | absolute_url }}
+      {{ item.url | prepend: site.url }}
     {% endif %}
   </link>
   <description>{{item.excerpt | xml_escape}}...</description>
@@ -14,7 +15,8 @@
     {% if item.url contains '://' %}
       {{item.url}}
     {% else %}
-      {{item.url | absolute_url }}
+      {{ item.url | prepend: site.url }}
     {% endif %}
   </guid>
 </item>
+{% endunless %}
