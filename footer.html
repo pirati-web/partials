@@ -14,8 +14,18 @@
         <h3><i class="fab fa-facebook"></i>
         </h3>
       </a>
-      {% if site.twitterurl %}
-      <a href="{{ site.twitterurl }}"><h3><i class="fab fa-twitter-square"></i></h3></a>
+ 
+      {% if site.instagramurl %}
+      <a href="{{ site.twitterurl }}">
+        <h3><i class="fab fa-twitter-square"></i></h3>
+      </a>
+      {% endif %}
+   
+      {% if site.instagramurl %}
+      <a href="{{ site.instagramurl }}"><h3><i class="fab fa-instagram-square"></i></h3></a>
+      {% endif %}
+      {% if site.tiktokurl %}
+      <a href="{{ site.tiktokurl }}"><h3><i class="fab fa-tiktok"></i></h3></a>
       {% endif %}
       <a class='rss' href='/blog.rss'><h3><i class="fas fa-rss-square"></i></h3></a>
       <a href="#"><i class="fas fa-angle-double-up"></i> Nahoru (Top)</a>
